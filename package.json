@@ -1,0 +1,30 @@
+{
+  "name": "ons-learn-dev",
+  "version": "1.0.0",
+  "description": "Learning and development resource platform",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Elliott Phillips",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.3.0",
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^18.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.6.3"
+  }
+}
