@@ -1,14 +1,16 @@
-import Link from 'next/link'
+import Layout from '../components/Layout'
 
-const Page = () => {
+const AboutPage = () => {
+  const test = true
+
   return (
     <>
-      <div>This is about, go back home!</div>
-      <Link href="/">
-        <button>Back to home</button>
-      </Link>
+      <Layout>
+        <h1>About this site...</h1>
+        {test && <h2>thing</h2>}
+      </Layout>
     </>
   )
 }
 
-export default Page
+export default AboutPage
