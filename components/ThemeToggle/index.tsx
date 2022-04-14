@@ -15,8 +15,6 @@ function TogglerButton({ themeToggler }: ThemeTogglerProps) {
     setPrefersDark(window.localStorage.getItem('theme') === 'dark')
   }, [themeToggler])
 
-  useEffect(() => {}, [themeToggler])
-
   if (!hasMounted) {
     return null
   }
