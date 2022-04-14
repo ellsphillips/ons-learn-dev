@@ -1,16 +1,14 @@
-import Link from 'next/link'
+import App from '../components/App'
+import Layout from '../components/Layout'
 
-const Page = () => {
+const HomePage = () => {
   return (
     <>
-      <div>Go to about page</div>
-      <Link href="/about">
-        <a>
-          <img src="https://raw.githubusercontent.com/ellsphillips/doctor/master/docs/img/doctor-logo.svg" />
-        </a>
-      </Link>
+      <Layout>
+        <App />
+      </Layout>
     </>
   )
 }
 
-export default Page
+export default HomePage
