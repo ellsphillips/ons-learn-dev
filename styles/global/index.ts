@@ -1,6 +1,6 @@
 import { createGlobalStyle, withTheme } from 'styled-components'
 import { fontFamily } from '../fonts'
-import { ThemeProps } from '../theme'
+import { ThemeProps } from '../theme/Theme'
 
 type GlobalThemeProps = {
   theme: ThemeProps
@@ -54,8 +54,8 @@ const globalStyle = createGlobalStyle`
     body  {
         font-weight: 400;
         line-height: 1.6;
-        color: ${({ theme }: GlobalThemeProps) => theme.fg};
-        background-color: ${({ theme }: GlobalThemeProps) => theme.bgPrimary};
+        color: ${({ theme }: GlobalThemeProps) => theme.fg.primary};
+        background-color: ${({ theme }: GlobalThemeProps) => theme.bg.primary};
         background-size: cover;
         background-repeat: no-repeat;
         transition: color, background-color 250ms ease-in-out;
@@ -63,7 +63,7 @@ const globalStyle = createGlobalStyle`
 
     h1, h2, h3 {
         font-size: 3.375rem;
-        color: ${({ theme }: GlobalThemeProps) => theme.fg};
+        color: ${({ theme }: GlobalThemeProps) => theme.fg.primary};
     }
 
     ::selection {
