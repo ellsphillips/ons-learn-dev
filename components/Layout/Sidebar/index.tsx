@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import logo from '../../../assets/img/logo.svg'
-import SidebarContainer from './styles'
+import Container from './styles'
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
   const trigger: React.MutableRefObject<any> = useRef(null)
@@ -33,7 +33,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
   })
 
   return (
-    <SidebarContainer>
+    <Container>
       <div className="sidebar">
         {/* Sidebar backdrop (mobile only) */}
         <div
@@ -76,7 +76,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
           </div>
         </div>
       </div>
-    </SidebarContainer>
+    </Container>
   )
 }
 

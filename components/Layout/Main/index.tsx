@@ -1,12 +1,12 @@
 import React from 'react'
-import * as Styles from './styles'
+import { Container, Header } from './styles'
 
 const Main = ({ children }) => {
   return (
-    <Styles.Container>
-      <Styles.Header></Styles.Header>
+    <Container>
+      <Header></Header>
       {children}
-    </Styles.Container>
+    </Container>
   )
 }
 
