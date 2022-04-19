@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import * as Nav from './styles'
+import { Container, Item } from './styles'
 
 const Navigation = () => {
   return (
     <>
-      <Nav.Container>
+      <Container>
         <Link href="/">
-          <Nav.Item>Home</Nav.Item>
+          <Item>Home</Item>
         </Link>
         <Link href="/about">
-          <Nav.Item>About</Nav.Item>
+          <Item>About</Item>
         </Link>
-      </Nav.Container>
+      </Container>
     </>
   )
 }

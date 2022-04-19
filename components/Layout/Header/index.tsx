@@ -1,10 +1,10 @@
 import React from 'react'
 import logo from '../../../assets/img/logo.svg'
-import HeaderContainer from './styles'
+import Container from './styles'
 
 function Header({ sidebarOpen, setSidebarOpen }: any) {
   return (
-    <HeaderContainer>
+    <Container>
       <header className="header">
         <div className="container">
           <div className="hero">
@@ -35,7 +35,7 @@ function Header({ sidebarOpen, setSidebarOpen }: any) {
           </div>
         </div>
       </header>
-    </HeaderContainer>
+    </Container>
   )
 }
 

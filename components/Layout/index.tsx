@@ -9,7 +9,7 @@ import ThemeToggle from '../ThemeToggle'
 import Header from './Header'
 import Main from './Main'
 import Sidebar from './Sidebar'
-import * as Styles from './styles'
+import { Container, Wrapper } from './styles'
 
 const Layout = ({ children }): ReactElement => {
   const [hasMounted, setHasMounted] = useState(false)
@@ -31,20 +31,20 @@ const Layout = ({ children }): ReactElement => {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
 
-        <Styles.Wrapper>
+        <Wrapper>
           <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-          <Styles.Container>
+          <Container>
             <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <Main>
               <Navigation />
               <ThemeToggle themeToggler={themeToggler} />
               {children}
             </Main>
-          </Styles.Container>
+          </Container>
 
           {/* <Center>{children}</Center> */}
-        </Styles.Wrapper>
+        </Wrapper>
       </ThemeProvider>
     </ThemeContext>
   )
