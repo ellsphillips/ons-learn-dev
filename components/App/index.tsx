@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { ReactElement } from 'react'
+import Logo from '../../assets/img/logo.svg'
 
 const App = (): ReactElement => {
 	return (
@@ -8,12 +9,7 @@ const App = (): ReactElement => {
 			<h1>Welcome!</h1>
 			<Link href="/about">
 				<a>
-					<Image
-						src="/assets/img/logo.svg"
-						alt="Doctor"
-						width={200}
-						height={200}
-					/>
+					<Image src={Logo} alt="Logo" width={200} height={200} />
 				</a>
 			</Link>
 		</>

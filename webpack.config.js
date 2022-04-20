@@ -15,13 +15,6 @@ module.exports = {
 				test: /\.tsx?$/,
 				exclude: /node_module/,
 				use: ['babel-loader', 'stylelint-custom-processor-loader'],
-				test: /\.svg$/,
-				use: {
-					loader: 'svg-url-loader',
-					options: {
-						encoding: 'base64',
-					},
-				},
 			},
 			{
 				test: /\.svg/,
