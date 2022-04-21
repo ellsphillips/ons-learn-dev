@@ -22,7 +22,7 @@ const light: ThemeProps = {
 		tertiary: '#b0b1b4',
 	},
 	fg: {
-		primary: 'var(--dark-bg-primary)',
+		primary: '#1f1f2a',
 		secondary: '#2f3037',
 		tertiary: '#525560',
 		quarternary: '#9194a1',
@@ -41,13 +41,13 @@ const dark: ThemeProps = {
 	},
 	fg: {
 		primary: '#fbfbfc',
-		secondary: '#e3e4e8',
+		secondary: '#cfd0d4',
 		tertiary: '#a9abb6',
 		quarternary: '#6c6f7e',
 		placeholder: 'rgba(145,148,161,0.5)',
 		onPrimary: '#050505',
 	},
-	accent: '#fc9867',
+	accent: '#f39668',
 	// ...
 }
 
