@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface LogoProps {
-	width: string
+	width?: string
 	height?: string
 	includeType?: boolean
 }

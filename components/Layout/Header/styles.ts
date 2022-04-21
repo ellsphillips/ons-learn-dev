@@ -10,11 +10,14 @@ const HeaderContainer = styled.div`
 		}
 
 		.container {
-			position: relative;
 			display: flex;
+			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			padding-inline: 1.5rem;
+			line-height: 1;
 
+			color: var(--clr-fg-primary);
 			background-color: var(--clr-bg-secondary);
 			border-radius: 1rem;
 
@@ -22,57 +25,37 @@ const HeaderContainer = styled.div`
 				display: none;
 			}
 
-			.hero {
-				background-size: cover;
-				width: 100%;
-				height: 50%;
-			}
+			.hamburger {
+				color: var(--clr-fg-primary);
+				border-radius: 1rem;
 
-			.navigation {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				margin-right: 1.5rem;
-
-				.hamburger {
-					color: rgba(107, 114, 128, 1);
+				button {
+					color: pink;
+					background: none;
+					border: none;
+					padding: 1rem;
+					font: inherit;
+					cursor: pointer;
+					outline: inherit;
+					margin-block: 1rem;
+					border-radius: 1rem;
 
 					&:hover {
-						color: rgba(75, 85, 99, 1);
+						background-color: var(--clr-bg-tertiary);
 					}
 
-					span {
-						position: absolute;
-						width: 1px;
-						height: 1px;
-						padding: 0;
-						margin: -1px;
-						overflow: hidden;
-						clip: rect(0, 0, 0, 0);
-						white-space: nowrap;
-						border-width: 0;
+					svg {
+						fill: var(--clr-fg-primary);
 					}
+				}
 
-					button {
-						color: white;
-						background: none;
-						border: none;
-						padding: 0;
-						font: inherit;
-						cursor: pointer;
-						outline: inherit;
-						margin: 1.5rem;
-					}
+				.open-button {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
 
-					.open-button {
-						width: 1.5rem;
-						height: 1.5rem;
-						fill: currentColor;
-					}
-
-					@media (min-width: 1024px) {
-						display: none;
-					}
+				@media (min-width: 1024px) {
+					display: none;
 				}
 			}
 		}
