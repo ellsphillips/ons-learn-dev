@@ -8,22 +8,28 @@ export const tertiaryTextColor = '#272b30'
 export const backgroundColor = '#7a8288'
 
 export interface ThemeProps {
-  bgPrimary: string
-  bgSecondary?: string
-  bgTertiary?: string
-  fg: string
+	bg: {
+		primary: string
+		secondary: string
+		tertiary: string
+	}
+	fg: string
 }
 
 export const darkTheme: ThemeProps = {
-  bgPrimary: 'var(--dark-bg-primary)',
-  bgSecondary: 'var(--dark-bg-secondary)',
-  bgTertiary: 'var(--dark-bg-tertiary)',
-  fg: 'var(--dark-fg)'
+	bg: {
+		primary: 'var(--dark-bg-primary)',
+		secondary: 'var(--dark-bg-secondary)',
+		tertiary: 'var(--dark-bg-tertiary)',
+	},
+	fg: 'var(--dark-fg)',
 }
 
 export const lightTheme: ThemeProps = {
-  bgPrimary: 'var(--light-bg-primary)',
-  bgSecondary: 'var(--light-bg-secondary)',
-  bgTertiary: 'var(--light-bg-tertiary)',
-  fg: 'var(--light-fg)'
+	bg: {
+		primary: 'var(--light-bg-primary)',
+		secondary: 'var(--light-bg-secondary)',
+		tertiary: 'var(--light-bg-tertiary)',
+	},
+	fg: 'var(--light-fg)',
 }
