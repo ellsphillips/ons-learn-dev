@@ -86,28 +86,12 @@ const Sidebar = styled.div`
 					.arrow {
 						width: 1.5rem;
 						height: 1.5rem;
-						fill: currentColor;
-					}
-
-					span {
-						position: absolute;
-						width: 1px;
-						height: 1px;
-						padding: 0;
-						margin: -1px;
-						overflow: hidden;
-						clip: rect(0, 0, 0, 0);
-						white-space: nowrap;
-						border-width: 0;
+						fill: var(--clr-fg-primary);
 					}
 
 					@media (min-width: 1024px) {
 						display: none;
 					}
-				}
-
-				.logo {
-					display: block;
 				}
 			}
 
