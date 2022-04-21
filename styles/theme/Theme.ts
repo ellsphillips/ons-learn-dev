@@ -12,7 +12,10 @@ export interface ThemeProps {
 		placeholder: string
 		onPrimary: string
 	}
-	accent: string
+	accent: {
+		primary: string
+		secondary: string
+	}
 }
 
 const light: ThemeProps = {
@@ -29,7 +32,10 @@ const light: ThemeProps = {
 		placeholder: 'rgba(82,85,96,0.5)',
 		onPrimary: '#ffffff',
 	},
-	accent: 'rgba(0,61,89,1)',
+	accent: {
+		primary: '#003D59',
+		secondary: '#A8BD3A',
+	},
 	// ...
 }
 
@@ -47,7 +53,10 @@ const dark: ThemeProps = {
 		placeholder: 'rgba(145,148,161,0.5)',
 		onPrimary: '#050505',
 	},
-	accent: '#f39668',
+	accent: {
+		primary: '#f39669',
+		secondary: '#ffd866',
+	},
 	// ...
 }
 

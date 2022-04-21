@@ -15,7 +15,10 @@ const globalStyle = createGlobalStyle`
     --clr-fg-secondary: ${({ theme }: GlobalThemeProps) => theme.fg.secondary};
     --clr-fg-tertiary: ${({ theme }: GlobalThemeProps) => theme.fg.tertiary};
 
-    --clr-accent: ${({ theme }: GlobalThemeProps) => theme.accent};
+    --clr-accent-primary: ${({ theme }: GlobalThemeProps) =>
+			theme.accent.primary};
+    --clr-accent-secondary: ${({ theme }: GlobalThemeProps) =>
+			theme.accent.secondary};
     font-family: ${fontFamily};
 
 
@@ -91,7 +94,7 @@ const globalStyle = createGlobalStyle`
       width: 0.75rem;
       height: 0.75rem;
       border-radius: 0.25rem;
-      background-color: var(--clr-accent);
+      background-color: var(--clr-accent-primary);
     }
   }
   
@@ -100,7 +103,7 @@ const globalStyle = createGlobalStyle`
 
   ::selection {
       background-color: var(--clr-accent);
-      color: var(--clr-bg-primary);
+      color: var(--clr-bg-primary-primary);
   }
 `
 
