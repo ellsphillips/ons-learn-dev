@@ -18,7 +18,7 @@ export const Item = styled.div`
 	transition: color ease-in-out 150ms, background-color ease-in-out 150ms;
 
 	&:hover {
-		background-color: var(--clr-accent);
+		background-color: var(--clr-accent-primary);
 		color: var(--clr-bg-primary);
 	}
 `

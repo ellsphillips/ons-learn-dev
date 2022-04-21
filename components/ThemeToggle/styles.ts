@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const Slider = styled.div`
 	/* light mode accent */
-	background-color: var(--clr-accent);
+	background-color: var(--clr-accent-primary);
 	position: absolute;
 	cursor: pointer;
 	inset: 0;
@@ -39,7 +39,7 @@ export const Label = styled.label`
 
 		&:checked + ${Slider} {
 			/* dark mode accent */
-			background-color: var(--clr-accent);
+			background-color: var(--clr-accent-primary);
 
 			&:before {
 				transform: translateX(2rem);
