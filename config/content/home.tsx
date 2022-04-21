@@ -1,5 +1,4 @@
-import Logo from '@/assets/img/logo.svg'
-import Image from 'next/image'
+import Logo from '@/components/Logo'
 import Link from 'next/link'
 import React from 'react'
 
@@ -9,7 +8,7 @@ export default function HomeContent() {
 			<h1>Welcome!</h1>
 			<Link href="/about">
 				<a>
-					<Image src={Logo} alt="Logo" width={200} height={200} />
+					<Logo width="50%" includeType={true} />
 				</a>
 			</Link>
 		</>
