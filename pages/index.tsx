@@ -1,14 +1,13 @@
-import App from '@/components/App'
 import Layout from '@/components/Layout'
 import React from 'react'
+import { CONTENT } from '../config/'
 
 const HomePage = () => {
 	return (
-		<>
-			<Layout>
-				<App />
-			</Layout>
-		</>
+		<Layout>
+			{/*  */}
+			{CONTENT.home}
+		</Layout>
 	)
 }
 

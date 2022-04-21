@@ -18,6 +18,7 @@
 		"paths": {
 			"@/assets/*": ["assets/*"],
 			"@/components/*": ["components/*"],
+			"@/config/*": ["config/*"],
 			"@/contexts/*": ["contexts/*"],
 			"@/hoc/*": ["hoc/*"],
 			"@/hooks/*": ["hooks/*"],

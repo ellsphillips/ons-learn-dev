@@ -15,7 +15,7 @@ const HeaderContainer = styled.div`
 			align-items: center;
 			justify-content: space-between;
 
-			background-color: hsl(var(--clr-grey-700));
+			background-color: var(--clr-bg-secondary);
 			border-radius: 1rem;
 
 			@media (min-width: 1024px) {
