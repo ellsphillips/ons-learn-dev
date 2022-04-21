@@ -3,22 +3,19 @@ import { fontFamily } from '../fonts'
 import { ThemeProps } from '../theme/Theme'
 
 type GlobalThemeProps = {
-  theme: ThemeProps
+	theme: ThemeProps
 }
 
 const globalStyle = createGlobalStyle`
     :root {
-        --dark-bg-primary: #1A1B27;
-        --dark-bg-secondary: #444;
-        --dark-bg-tertiary: #888;
-        --dark-fg: #F5F5F7;
+        --clr-bg-primary: ${({ theme }: GlobalThemeProps) => theme.bg.primary};
+        --clr-bg-secondary: ${({ theme }: GlobalThemeProps) =>
+					theme.bg.secondary};
+        --clr-bg-tertiary: ${({ theme }: GlobalThemeProps) =>
+					theme.bg.tertiary};
+        --clr-fg: ${({ theme }: GlobalThemeProps) => theme.fg.primary};
 
-        --light-bg-primary: #f2f2f2;
-        --light-bg-secondary: #ccc;
-        --light-bg-tertiary: #999;
-        --light-fg: #1A1B27;
-
-        --accent-clr: #ff6188;
+        --clr-accent: ${({ theme }: GlobalThemeProps) => theme.accent};
         font-family: ${fontFamily};
 
 
@@ -54,21 +51,21 @@ const globalStyle = createGlobalStyle`
     body  {
         font-weight: 400;
         line-height: 1.6;
-        color: ${({ theme }: GlobalThemeProps) => theme.fg.primary};
-        background-color: ${({ theme }: GlobalThemeProps) => theme.bg.primary};
+        color: var(--clr-fg);
+        background-color: var(--clr-bg-primary);
         background-size: cover;
         background-repeat: no-repeat;
-        transition: color, background-color 250ms ease-in-out;
+        transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
     }
 
     h1, h2, h3 {
         font-size: 3.375rem;
-        color: ${({ theme }: GlobalThemeProps) => theme.fg.primary};
+        color: var(--clr-fg);
     }
 
     ::selection {
-        background-color: hsl(var(--clr-secondary));
-        color: var(--clr-bg);
+        background-color: var(--clr-accent);
+        color: var(--clr-bg-primary);
     }
 `
 
