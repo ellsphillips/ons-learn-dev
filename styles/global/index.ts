@@ -102,8 +102,8 @@ const globalStyle = createGlobalStyle`
   }
 
   ::selection {
-      background-color: var(--clr-accent);
-      color: var(--clr-bg-primary-primary);
+      background-color: var(--clr-accent-primary);
+      color: var(--clr-bg-primary);
   }
 `
 
