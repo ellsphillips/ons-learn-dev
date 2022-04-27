@@ -36,39 +36,35 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 
 	return (
 		<Container>
-			<div className="sidebar">
-				{/* Sidebar backdrop (mobile only) */}
-				<div
-					className={`sidebar--backdrop ${
-						sidebarOpen ? 'sidebar--backdrop__open' : 'sidebar--backdrop__close'
-					}`}
-					aria-hidden="true"
-				></div>
+			{/* Sidebar backdrop (mobile only) */}
+			<div
+				className={`sidebar--backdrop ${
+					sidebarOpen ? 'sidebar--backdrop__open' : 'sidebar--backdrop__close'
+				}`}
+				aria-hidden="true"
+			></div>
 
-				{/* Sidebar */}
-				<div
-					id="sidebar"
-					ref={sidebar}
-					className={`sidebar--menu ${
-						sidebarOpen ? 'sidebar--menu__open' : 'sidebar--menu__close'
-					}`}
-				>
-					{/* Sidebar header */}
-					<Header>
-						<BackArrow
-							ref={trigger}
-							onClick={() => setSidebarOpen(!sidebarOpen)}
-							aria-controls="sidebar"
-						/>
+			{/* Sidebar */}
+			<div
+				ref={sidebar}
+				className={`sidebar--menu ${
+					sidebarOpen ? 'sidebar--menu__open' : 'sidebar--menu__close'
+				}`}
+			>
+				{/* Sidebar header */}
+				<Header>
+					<BackArrow
+						ref={trigger}
+						onClick={() => setSidebarOpen(!sidebarOpen)}
+						aria-controls="sidebar"
+					/>
 
-						{/* Logo */}
-						<Link href="https://www.ons.gov.uk/">
-							<a target="_blank" rel="noreferrer">
-								<Logo width="75%" includeType={true} />
-							</a>
-						</Link>
-					</Header>
-				</div>
+					<Link href="https://www.ons.gov.uk/">
+						<a target="_blank" rel="noreferrer">
+							<Logo width="75%" includeType={true} />
+						</a>
+					</Link>
+				</Header>
 			</div>
 		</Container>
 	)
