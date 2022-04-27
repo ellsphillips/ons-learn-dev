@@ -1,5 +1,5 @@
-import Card from '@/components/CourseCard'
-import Grid from '@/components/CourseGrid'
+import Card from '@/components/Card'
+import Grid from '@/components/Grid'
 import Layout from '@/components/Layout'
 import articles from '@/config/articles'
 import Link from 'next/link'
