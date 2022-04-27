@@ -22,7 +22,7 @@ const light: ThemeProps = {
 	bg: {
 		primary: '#f8f8ff',
 		secondary: '#e2e3e8',
-		tertiary: '#b0b1b4',
+		tertiary: '#bdbec1',
 	},
 	fg: {
 		primary: '#1f1f2a',
