@@ -1,3 +1,4 @@
+import { breakpoints } from '@/styles/breakpoints'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -28,7 +29,7 @@ export const Container = styled.div`
 				pointer-events: none;
 			}
 
-			@media (min-width: 1024px) {
+			@media (min-width: ${breakpoints.desktop}) {
 				display: none;
 				z-index: auto;
 			}
@@ -60,7 +61,7 @@ export const Container = styled.div`
 				transform: translateX(-32rem);
 			}
 
-			@media (min-width: 1024px) {
+			@media (min-width: ${breakpoints.desktop}) {
 				left: auto;
 				top: auto;
 				transform: translateX(0);
@@ -75,10 +76,6 @@ export const Header = styled.div`
 	justify-content: space-between;
 	margin-bottom: 2.5rem;
 	padding-right: 0.75rem;
-
-	@media (min-width: 640px) {
-		padding: 0 0.5rem;
-	}
 
 	.close-button {
 		color: rgba(107, 114, 128, 1);
@@ -99,7 +96,7 @@ export const Header = styled.div`
 			fill: var(--clr-fg-primary);
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: ${breakpoints.desktop}) {
 			display: none;
 		}
 	}
