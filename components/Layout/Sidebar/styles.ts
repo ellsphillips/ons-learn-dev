@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Sidebar = styled.div`
+export const Container = styled.div`
 	.sidebar {
 		--sidebar-width: 30rem;
 		margin: 0rem 0;
@@ -60,41 +60,6 @@ const Sidebar = styled.div`
 				transform: translateX(-32rem);
 			}
 
-			&__header {
-				display: flex;
-				justify-content: space-between;
-				margin-bottom: 2.5rem;
-				padding-right: 0.75rem;
-
-				@media (min-width: 640px) {
-					padding: 0 0.5rem;
-				}
-
-				.close-button {
-					color: rgba(107, 114, 128, 1);
-					background: none;
-					border: none;
-					padding: 0;
-					font: inherit;
-					cursor: pointer;
-					outline: inherit;
-
-					&:hover {
-						color: rgba(156, 163, 175, 1);
-					}
-
-					.arrow {
-						width: 1.5rem;
-						height: 1.5rem;
-						fill: var(--clr-fg-primary);
-					}
-
-					@media (min-width: 1024px) {
-						display: none;
-					}
-				}
-			}
-
 			@media (min-width: 1024px) {
 				left: auto;
 				top: auto;
@@ -105,4 +70,37 @@ const Sidebar = styled.div`
 	}
 `
 
-export default Sidebar
+export const Header = styled.div`
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2.5rem;
+	padding-right: 0.75rem;
+
+	@media (min-width: 640px) {
+		padding: 0 0.5rem;
+	}
+
+	.close-button {
+		color: rgba(107, 114, 128, 1);
+		background: none;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+
+		&:hover {
+			color: rgba(156, 163, 175, 1);
+		}
+
+		.arrow {
+			width: 1.5rem;
+			height: 1.5rem;
+			fill: var(--clr-fg-primary);
+		}
+
+		@media (min-width: 1024px) {
+			display: none;
+		}
+	}
+`

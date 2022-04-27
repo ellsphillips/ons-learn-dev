@@ -1,7 +1,8 @@
+import BackArrow from '@/components/Button/BackArrow'
 import Logo from '@/components/Logo'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
-import Container from './styles'
+import { Container, Header } from './styles'
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 	const trigger: React.MutableRefObject<any> = useRef(null)
@@ -53,23 +54,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 					}`}
 				>
 					{/* Sidebar header */}
-					<div className="sidebar--menu__header">
-						{/* Close button */}
-						<button
+					<Header>
+						<BackArrow
 							ref={trigger}
-							className="close-button"
 							onClick={() => setSidebarOpen(!sidebarOpen)}
 							aria-controls="sidebar"
-							aria-expanded={sidebarOpen}
-						>
-							<svg
-								className="arrow"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z" />
-							</svg>
-						</button>
+						/>
 
 						{/* Logo */}
 						<Link href="https://www.ons.gov.uk/">
@@ -77,7 +67,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 								<Logo width="75%" includeType={true} />
 							</a>
 						</Link>
-					</div>
+					</Header>
 				</div>
 			</div>
 		</Container>
