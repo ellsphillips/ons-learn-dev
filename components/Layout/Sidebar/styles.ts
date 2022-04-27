@@ -2,36 +2,21 @@ import BackArrow from '@/components/Button/BackArrow/style'
 import { breakpoints } from '@/styles/breakpoints'
 import styled from 'styled-components'
 
-export const Container = styled.div`
-	.sidebar--backdrop {
-		position: fixed;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		background-color: rgba(0, 0, 0, 0.5);
+export const Backdrop = styled.div`
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 40;
 
-		z-index: 40;
+	transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
-		transition-property: opacity;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-
-		&__open {
-			opacity: 1;
-		}
-
-		&__close {
-			opacity: 0;
-			pointer-events: none;
-		}
-
-		@media (min-width: ${breakpoints.desktop}) {
-			display: none;
-			z-index: auto;
-		}
+	@media (min-width: ${breakpoints.desktop}) {
+		display: none;
+		z-index: auto;
 	}
+`
 
+export const Container = styled.div`
 	.sidebar--menu {
 		position: absolute;
 		z-index: 40;
