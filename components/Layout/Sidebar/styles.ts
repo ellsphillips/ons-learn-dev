@@ -24,6 +24,11 @@ export const Menu = styled.div`
 	z-index: 40;
 
 	height: calc(100vh - 4rem);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 	overflow-y: scroll;
 	overflow-x: hidden;
 	-ms-overflow-style: none;
@@ -48,11 +53,24 @@ export const Header = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2.5rem;
-	padding-right: 0.75rem;
 
 	${BackArrow} {
 		@media (min-width: ${breakpoints.desktop}) {
 			display: none;
 		}
 	}
+`
+
+export const Footer = styled.div`
+	display: flex;
+	height: 4rem;
+	align-items: center;
+	justify-content: space-between;
+`
+
+export const Media = styled.div`
+	display: flex;
+	gap: 1rem;
+	width: 6rem;
+	max-height: 4rem;
 `

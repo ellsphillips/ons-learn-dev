@@ -1,8 +1,10 @@
 import BackArrow from '@/components/Button/BackArrow'
 import Logo from '@/components/Logo'
+import GitHubLogo from '@/components/Logo/GitHub'
+import LinkedInLogo from '@/components/Logo/LinkedIn'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
-import { Backdrop, Container, Header, Menu } from './styles'
+import { Backdrop, Container, Footer, Header, Media, Menu } from './styles'
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 	const trigger: React.MutableRefObject<any> = useRef(null)
@@ -71,6 +73,28 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 						aria-controls="sidebar"
 					/>
 				</Header>
+
+				<Footer>
+					<Media>
+						<GitHubLogo
+							href="https://github.com/ellsphillips/ons.dev"
+							style={{
+								fill: 'var(--clr-fg-primary)',
+								height: '1rem',
+								cursor: 'pointer',
+							}}
+						/>
+						<LinkedInLogo
+							href="https://www.linkedin.com/in/elliott-phillips/"
+							style={{
+								fill: 'var(--clr-fg-primary)',
+								height: '1rem',
+								cursor: 'pointer',
+							}}
+						/>
+					</Media>
+					<p>lol</p>
+				</Footer>
 			</Menu>
 		</Container>
 	)
