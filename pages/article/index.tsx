@@ -4,7 +4,7 @@ import Layout from '@/components/Layout'
 import articles from '@/config/articles'
 import Link from 'next/link'
 import React from 'react'
-import { CONTENT } from '../config/'
+import { CONTENT } from '../../config/'
 
 const HomePage = () => {
 	return (
@@ -14,7 +14,7 @@ const HomePage = () => {
 
 			<Grid>
 				{articles.map(article => (
-					<Link key={article.slug} href={`/article/${article.slug}`}>
+					<Link href={`/article/${article.slug}`}>
 						<a style={{ textDecoration: 'none' }}>
 							<Card
 								author={article.author}
