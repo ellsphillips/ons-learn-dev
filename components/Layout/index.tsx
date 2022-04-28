@@ -5,10 +5,12 @@ import { darkTheme, lightTheme } from '@/styles/theme/Theme'
 import React, { ReactElement, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import Navigation from '../Nav'
+import SocialMedia from '../SocialMedia'
 import ThemeToggle from '../ThemeToggle'
 import Header from './Header'
 import Main from './Main'
 import Sidebar from './Sidebar'
+import { Footer } from './Sidebar/styles'
 import { Container, Wrapper } from './styles'
 
 const Layout = ({ children }): ReactElement => {
@@ -21,9 +23,6 @@ const Layout = ({ children }): ReactElement => {
 	const { theme, themeToggler } = useThemeMode()
 	const themeMode = theme === 'dark' ? darkTheme : lightTheme
 
-	//   const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
-	//   const themeMode = darkMode.value ? darkTheme : lightTheme
-
 	const [sidebarOpen, setSidebarOpen] = useState<boolean>(false)
 
 	const body = (
@@ -32,18 +31,22 @@ const Layout = ({ children }): ReactElement => {
 				<GlobalStyles />
 
 				<Wrapper>
-					<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+					<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+						<h3>Insert nav here</h3>
+
+						<Footer>
+							<SocialMedia />
+							<ThemeToggle themeToggler={themeToggler} />
+						</Footer>
+					</Sidebar>
 
 					<Container>
 						<Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 						<Main>
 							<Navigation />
-							<ThemeToggle themeToggler={themeToggler} />
 							{children}
 						</Main>
 					</Container>
-
-					{/* <Center>{children}</Center> */}
 				</Wrapper>
 			</ThemeProvider>
 		</ThemeContext>

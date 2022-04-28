@@ -63,7 +63,6 @@ export const Header = styled.div`
 
 export const Footer = styled.div`
 	display: flex;
-	height: 4rem;
 	align-items: center;
 	justify-content: space-between;
 `
