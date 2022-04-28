@@ -59,17 +59,17 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 				}
 			>
 				<Header>
-					<BackArrow
-						ref={trigger}
-						onClick={() => setSidebarOpen(!sidebarOpen)}
-						aria-controls="sidebar"
-					/>
-
 					<Link href="https://www.ons.gov.uk/">
 						<a target="_blank" rel="noreferrer">
 							<Logo width="75%" includeType={true} />
 						</a>
 					</Link>
+
+					<BackArrow
+						ref={trigger}
+						onClick={() => setSidebarOpen(!sidebarOpen)}
+						aria-controls="sidebar"
+					/>
 				</Header>
 			</Menu>
 		</Container>

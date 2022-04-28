@@ -2,6 +2,8 @@ import BackArrow from '@/components/Button/BackArrow/style'
 import { breakpoints } from '@/styles/breakpoints'
 import styled from 'styled-components'
 
+export const Container = styled.div``
+
 export const Backdrop = styled.div`
 	width: 100%;
 	position: fixed;
@@ -20,8 +22,6 @@ export const Backdrop = styled.div`
 export const Menu = styled.div`
 	position: absolute;
 	z-index: 40;
-
-	/* transform: translateX(32rem); */
 
 	height: calc(100vh - 4rem);
 	overflow-y: scroll;
@@ -43,8 +43,6 @@ export const Menu = styled.div`
 		overflow-y: auto;
 	}
 `
-
-export const Container = styled.div``
 
 export const Header = styled.div`
 	display: flex;
