@@ -14,7 +14,7 @@ const HomePage = () => {
 
 			<Grid>
 				{articles.map(article => (
-					<Link href={`/article/${article.slug}`}>
+					<Link key={article.slug} href={`/article/${article.slug}`}>
 						<a style={{ textDecoration: 'none' }}>
 							<Card
 								author={article.author}

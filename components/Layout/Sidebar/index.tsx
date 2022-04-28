@@ -48,7 +48,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 				aria-hidden="true"
 			></Backdrop>
 
-			{/* Sidebar */}
 			<Menu
 				ref={sidebar}
 				style={

@@ -8,7 +8,7 @@ interface BackArrowProps {
 
 const BackArrow = (props: BackArrowProps) => {
 	return (
-		<Button ref={props.ref} className="close-button" onClick={props.onClick}>
+		<Button className="close-button" onClick={props.onClick}>
 			<svg
 				className="arrow"
 				viewBox="0 0 24 24"
