@@ -3,6 +3,7 @@ import { breakpoints } from '@/styles/breakpoints'
 import styled from 'styled-components'
 
 export const Backdrop = styled.div`
+	width: 100%;
 	position: fixed;
 	inset: 0;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -16,41 +17,34 @@ export const Backdrop = styled.div`
 	}
 `
 
-export const Container = styled.div`
-	.sidebar--menu {
-		position: absolute;
-		z-index: 40;
+export const Menu = styled.div`
+	position: absolute;
+	z-index: 40;
 
-		transform: translateX(-30rem);
+	/* transform: translateX(32rem); */
 
-		height: calc(100vh - 4rem);
-		overflow-y: scroll;
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-		width: 30rem;
-		flex-shrink: 0;
-		background-color: var(--clr-bg-secondary);
-		padding: 1.5rem;
-		border-radius: 1rem;
+	height: calc(100vh - 4rem);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	width: 30rem;
+	flex-shrink: 0;
+	background-color: var(--clr-bg-secondary);
+	padding: 1.5rem;
+	border-radius: 1rem;
 
-		transition: transform cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+	transition: transform cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
-		&__open {
-			transform: translateX(0rem);
-		}
-
-		&__close {
-			transform: translateX(-32rem);
-		}
-
-		@media (min-width: ${breakpoints.desktop}) {
-			left: auto;
-			top: auto;
-			transform: translateX(0);
-			overflow-y: auto;
-		}
+	@media (min-width: ${breakpoints.desktop}) {
+		left: 34rem;
+		top: auto;
+		transform: translateX(32rem);
+		overflow-y: auto;
 	}
 `
+
+export const Container = styled.div``
 
 export const Header = styled.div`
 	display: flex;

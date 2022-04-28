@@ -2,7 +2,7 @@ import BackArrow from '@/components/Button/BackArrow'
 import Logo from '@/components/Logo'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
-import { Backdrop, Container, Header } from './styles'
+import { Backdrop, Container, Header, Menu } from './styles'
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 	const trigger: React.MutableRefObject<any> = useRef(null)
@@ -49,13 +49,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 			></Backdrop>
 
 			{/* Sidebar */}
-			<div
+			<Menu
 				ref={sidebar}
-				className={`sidebar--menu ${
-					sidebarOpen ? 'sidebar--menu__open' : 'sidebar--menu__close'
-				}`}
+				style={
+					sidebarOpen
+						? { transform: 'translateX(0rem)' }
+						: {
+								transform: 'translateX(-32rem)',
+						  }
+				}
 			>
-				{/* Sidebar header */}
 				<Header>
 					<BackArrow
 						ref={trigger}
@@ -69,7 +72,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 						</a>
 					</Link>
 				</Header>
-			</div>
+			</Menu>
 		</Container>
 	)
 }
