@@ -1,7 +1,8 @@
+import BackArrow from '@/components/Button/BackArrow'
 import Logo from '@/components/Logo'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
-import Container from './styles'
+import { Backdrop, Container, Header, Menu } from './styles'
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 	const trigger: React.MutableRefObject<any> = useRef(null)
@@ -35,51 +36,43 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 
 	return (
 		<Container>
-			<div className="sidebar">
-				{/* Sidebar backdrop (mobile only) */}
-				<div
-					className={`sidebar--backdrop ${
-						sidebarOpen ? 'sidebar--backdrop__open' : 'sidebar--backdrop__close'
-					}`}
-					aria-hidden="true"
-				></div>
+			<Backdrop
+				style={
+					sidebarOpen
+						? { opacity: 1 }
+						: {
+								opacity: 0,
+								pointerEvents: 'none',
+						  }
+				}
+				aria-hidden="true"
+			></Backdrop>
 
-				{/* Sidebar */}
-				<div
-					id="sidebar"
-					ref={sidebar}
-					className={`sidebar--menu ${
-						sidebarOpen ? 'sidebar--menu__open' : 'sidebar--menu__close'
-					}`}
-				>
-					{/* Sidebar header */}
-					<div className="sidebar--menu__header">
-						{/* Close button */}
-						<button
-							ref={trigger}
-							className="close-button"
-							onClick={() => setSidebarOpen(!sidebarOpen)}
-							aria-controls="sidebar"
-							aria-expanded={sidebarOpen}
-						>
-							<svg
-								className="arrow"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z" />
-							</svg>
-						</button>
+			{/* Sidebar */}
+			<Menu
+				ref={sidebar}
+				style={
+					sidebarOpen
+						? { transform: 'translateX(0rem)' }
+						: {
+								transform: 'translateX(-32rem)',
+						  }
+				}
+			>
+				<Header>
+					<BackArrow
+						ref={trigger}
+						onClick={() => setSidebarOpen(!sidebarOpen)}
+						aria-controls="sidebar"
+					/>
 
-						{/* Logo */}
-						<Link href="https://www.ons.gov.uk/">
-							<a target="_blank" rel="noreferrer">
-								<Logo width="75%" includeType={true} />
-							</a>
-						</Link>
-					</div>
-				</div>
-			</div>
+					<Link href="https://www.ons.gov.uk/">
+						<a target="_blank" rel="noreferrer">
+							<Logo width="75%" includeType={true} />
+						</a>
+					</Link>
+				</Header>
+			</Menu>
 		</Container>
 	)
 }

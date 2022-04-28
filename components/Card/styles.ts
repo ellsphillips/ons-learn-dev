@@ -17,9 +17,9 @@ export const Container = styled.div`
 `
 
 export const Thumbnail = styled.img<{ src: string }>`
-	height: 60%;
+	min-height: 60%;
+	width: 100%;
 	background-color: ${props => props.src};
-	background-size: cover;
 `
 
 export const Details = styled.div`
