@@ -66,10 +66,3 @@ export const Footer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 `
-
-export const Media = styled.div`
-	display: flex;
-	gap: 1rem;
-	width: 6rem;
-	max-height: 4rem;
-`
