@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
 export default styled.button`
+	align-items: center;
 	background: none;
 	border: none;
-	padding: 0;
+	padding: 0.75rem 1rem 0.5rem 1rem;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+	border-radius: 1rem;
+
+	&:hover {
+		background-color: var(--clr-bg-tertiary);
+	}
 
 	svg {
 		width: 1.5rem;
@@ -14,9 +20,5 @@ export default styled.button`
 		fill: var(--clr-fg-primary);
 
 		transition: fill 150ms ease-out;
-
-		&:hover {
-			fill: var(--clr-accent-primary);
-		}
 	}
 `

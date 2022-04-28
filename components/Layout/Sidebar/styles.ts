@@ -2,6 +2,8 @@ import BackArrow from '@/components/Button/BackArrow/style'
 import { breakpoints } from '@/styles/breakpoints'
 import styled from 'styled-components'
 
+export const Container = styled.div``
+
 export const Backdrop = styled.div`
 	width: 100%;
 	position: fixed;
@@ -21,9 +23,12 @@ export const Menu = styled.div`
 	position: absolute;
 	z-index: 40;
 
-	/* transform: translateX(32rem); */
-
 	height: calc(100vh - 4rem);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 	overflow-y: scroll;
 	overflow-x: hidden;
 	-ms-overflow-style: none;
@@ -44,17 +49,27 @@ export const Menu = styled.div`
 	}
 `
 
-export const Container = styled.div``
-
 export const Header = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2.5rem;
-	padding-right: 0.75rem;
 
 	${BackArrow} {
 		@media (min-width: ${breakpoints.desktop}) {
 			display: none;
 		}
 	}
+`
+
+export const Footer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+`
+
+export const Media = styled.div`
+	display: flex;
+	gap: 1rem;
+	width: 6rem;
+	max-height: 4rem;
 `

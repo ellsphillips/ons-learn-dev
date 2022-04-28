@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import { Backdrop, Container, Header, Menu } from './styles'
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
+const Sidebar = ({ sidebarOpen, setSidebarOpen, children }: any) => {
 	const trigger: React.MutableRefObject<any> = useRef(null)
 	const sidebar: React.MutableRefObject<any> = useRef(null)
 
@@ -59,18 +59,20 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: any) => {
 				}
 			>
 				<Header>
-					<BackArrow
-						ref={trigger}
-						onClick={() => setSidebarOpen(!sidebarOpen)}
-						aria-controls="sidebar"
-					/>
-
 					<Link href="https://www.ons.gov.uk/">
 						<a target="_blank" rel="noreferrer">
 							<Logo width="75%" includeType={true} />
 						</a>
 					</Link>
+
+					<BackArrow
+						ref={trigger}
+						onClick={() => setSidebarOpen(!sidebarOpen)}
+						aria-controls="sidebar"
+					/>
 				</Header>
+
+				{children}
 			</Menu>
 		</Container>
 	)
