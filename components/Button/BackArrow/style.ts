@@ -4,7 +4,7 @@ export default styled.button`
 	align-items: center;
 	background: none;
 	border: none;
-	padding: 0.75rem 1rem;
+	padding: 0.75rem 1rem 0.5rem 1rem;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
