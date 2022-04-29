@@ -10,7 +10,7 @@ import ThemeToggle from '../ThemeToggle'
 import Header from './Header'
 import Main from './Main'
 import Sidebar from './Sidebar'
-import { Footer } from './Sidebar/styles'
+import * as Menu from './Sidebar/styles'
 import { Container, Wrapper } from './styles'
 
 const Layout = ({ children }): ReactElement => {
@@ -34,10 +34,10 @@ const Layout = ({ children }): ReactElement => {
 					<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
 						<h3>Insert nav here</h3>
 
-						<Footer>
+						<Menu.Footer>
 							<SocialMedia />
 							<ThemeToggle themeToggler={themeToggler} />
-						</Footer>
+						</Menu.Footer>
 					</Sidebar>
 
 					<Container>
