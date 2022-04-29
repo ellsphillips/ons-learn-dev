@@ -1,0 +1,63 @@
+import { breakpoints } from '@/styles/breakpoints'
+import styled from 'styled-components'
+
+export const Container = styled.div`
+	position: relative;
+	margin: 0 auto;
+	max-width: 62.5rem;
+	padding: 0 0rem;
+
+	display: grid;
+	grid-template-areas:
+		'heading image'
+		'paragraph image';
+
+	gap: 1rem;
+
+	@media (max-width: ${breakpoints.tablet}) {
+		grid-template-areas:
+			'heading image'
+			'paragraph paragraph';
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -1rem;
+
+		grid-row: 1 / 2;
+
+		background-color: var(--clr-accent-primary);
+		background-image: linear-gradient(
+			145deg,
+			var(--clr-accent-primary),
+			var(--clr-accent-secondary)
+		);
+
+		border-radius: 1em;
+		z-index: -1;
+	}
+`
+
+export const Heading = styled.h1`
+	grid-area: heading;
+	color: var(--clr-bg-primary);
+	font-size: 3rem;
+	line-height: 1.2;
+	padding: 0.5rem 0;
+`
+
+export const Paragraph = styled.p`
+	grid-area: paragraph;
+	color: var(--clr-fg-secondary);
+	font-weight: bold;
+`
+
+export const Picture = styled.img`
+	grid-area: image;
+	border-radius: 1rem;
+	width: 100%;
+	height: 70%;
+	object-fit: cover;
+	object-position: center;
+`
