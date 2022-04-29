@@ -7,5 +7,11 @@ export const LogoDefaults = styled.div`
 	line-height: 1;
 	cursor: 'pointer';
 
-	transition: fill 150ms ease-out;
+	svg {
+		transition: fill 150ms ease-out;
+
+		&:hover {
+			fill: var(--clr-accent-primary);
+		}
+	}
 `
