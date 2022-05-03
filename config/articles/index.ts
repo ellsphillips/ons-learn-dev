@@ -5,7 +5,7 @@ export default [
 		subtitle: 'Learn to use dataclasses to model and represent data sturctures',
 		author: 'Elliott Phillips',
 		thumbnail:
-			'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80',
+			'https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
 		// '#fc4103',
 		profile:
 			'https://raw.githubusercontent.com/ellsphillips/ons.dev/master/assets/img/logo.svg',
@@ -16,7 +16,7 @@ export default [
 		subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		author: 'Elliott Phillips',
 		thumbnail:
-			'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+			'https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80',
 		// '#fca103',
 		profile: '../../assets/img/profile/ep.jpg',
 	},
@@ -27,7 +27,7 @@ export default [
 			'Fusce sed sagittis purus. Vestibulum dignissim hendrerit pulvinar.',
 		author: 'Elliott Phillips',
 		thumbnail:
-			'https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+			'https://images.unsplash.com/photo-1555952494-efd681c7e3f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 		// '#f0fc03',
 		profile: '../../assets/img/profile/ep.jpg',
 	},
