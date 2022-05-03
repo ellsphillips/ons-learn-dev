@@ -3,9 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	/* padding: 2rem;
 	background-color: var(--clr-bg-secondary); */
-	background-color: pink;
 	border-radius: 1rem;
-	overflow-y: scroll;
 
 	@media (min-width: 1024px) {
 		margin-left: 32rem;

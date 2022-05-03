@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
 	display: flex;
 	margin: 2rem;
-	height: calc(100vh - 4rem);
+	margin-bottom: 0;
+	height: calc(100vh - 2rem);
 	overflow: hidden;
 `
 
