@@ -44,10 +44,11 @@ const Layout = ({ children }): ReactElement => {
 					<Container>
 						<Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-						<Hero />
-
 						<Main>
 							<Navigation />
+
+							<Hero />
+
 							{children}
 						</Main>
 					</Container>
