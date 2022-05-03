@@ -52,7 +52,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, children }: any) => {
 				ref={sidebar}
 				style={
 					sidebarOpen
-						? { transform: 'translateX(0rem)' }
+						? { transform: 'translateX(2rem)' }
 						: {
 								transform: 'translateX(-32rem)',
 						  }
