@@ -33,7 +33,7 @@ const Layout = ({ children }): ReactElement => {
 
 				<Wrapper>
 					<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
-						<h3>Insert nav here</h3>
+						<Navigation />
 
 						<Menu.Footer>
 							<SocialMedia />
@@ -45,8 +45,6 @@ const Layout = ({ children }): ReactElement => {
 						<Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
 						<Main>
-							<Navigation />
-
 							<Hero />
 
 							{children}
