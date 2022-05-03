@@ -17,7 +17,7 @@ export const Container = styled.div`
 	overflow-x: hidden;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 172rem;
+	max-width: 120rem;
 
 	@media only screen and (max-width: 1024px) {
 		min-width: 100%;
