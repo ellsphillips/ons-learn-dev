@@ -21,7 +21,6 @@ export const Thumbnail = styled.div<{
 }>`
 	min-height: 60%;
 	max-width: 100%;
-	/* background-color: ${props => props.src}; */
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -60,7 +59,15 @@ export const Author = styled.h3`
 	font-size: 1.25rem;
 `
 
-export const ProfilePicture = styled.img`
+export const ProfilePicture = styled.div<{
+	src: string
+}>`
+	align-self: center;
 	width: 4rem;
+	height: 4rem;
 	border-radius: 0.5rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(${props => props.src});
 `

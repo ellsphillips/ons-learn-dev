@@ -19,6 +19,9 @@ export const Container = styled.div`
 		grid-template-areas:
 			'heading image'
 			'paragraph paragraph';
+
+		margin-inline: 0;
+		width: 100%;
 	}
 
 	&::before {
@@ -49,6 +52,10 @@ export const Heading = styled.h1`
 	font-size: 4rem;
 	line-height: 1.2;
 	padding: 0.5rem;
+
+	@media (max-width: ${breakpoints.mobile}) {
+		font-size: 3rem;
+	}
 `
 
 export const Paragraph = styled.p`
