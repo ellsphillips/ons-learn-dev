@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
 	display: flex;
 	margin: 2rem;
-	height: calc(100vh - 4rem);
+	margin-bottom: 0;
+	height: calc(100vh - 2rem);
 	overflow: hidden;
 `
 
@@ -16,7 +17,7 @@ export const Container = styled.div`
 	overflow-x: hidden;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 172rem;
+	max-width: 120rem;
 
 	@media only screen and (max-width: 1024px) {
 		min-width: 100%;

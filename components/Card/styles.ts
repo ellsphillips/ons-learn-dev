@@ -16,10 +16,15 @@ export const Container = styled.div`
 	}
 `
 
-export const Thumbnail = styled.img<{ src: string }>`
+export const Thumbnail = styled.div<{
+	src: string
+}>`
 	min-height: 60%;
-	width: 100%;
-	background-color: ${props => props.src};
+	max-width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-image: url(${props => props.src});
 `
 
 export const Details = styled.div`
@@ -54,7 +59,15 @@ export const Author = styled.h3`
 	font-size: 1.25rem;
 `
 
-export const ProfilePicture = styled.img`
+export const ProfilePicture = styled.div<{
+	src: string
+}>`
+	align-self: center;
 	width: 4rem;
+	height: 4rem;
 	border-radius: 0.5rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(${props => props.src});
 `

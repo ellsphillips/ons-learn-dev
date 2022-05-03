@@ -4,20 +4,24 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	position: relative;
 	margin: 0 auto;
-	max-width: 62.5rem;
-	padding: 0 0rem;
+	margin-bottom: 4rem;
+	width: min(calc(100% - 2rem), 62.5rem);
+	padding: 0rem;
+	inset: 1rem;
 
 	display: grid;
+	gap: 1rem;
 	grid-template-areas:
 		'heading image'
 		'paragraph image';
 
-	gap: 1rem;
-
-	@media (max-width: ${breakpoints.tablet}) {
+	@media (max-width: ${breakpoints.mobile}) {
 		grid-template-areas:
 			'heading image'
 			'paragraph paragraph';
+
+		margin-inline: 0;
+		width: 100%;
 	}
 
 	&::before {
@@ -41,16 +45,25 @@ export const Container = styled.div`
 
 export const Heading = styled.h1`
 	grid-area: heading;
+	display: flex;
+	align-items: flex-end;
+	width: clamp(14ch, 70%, 18ch);
 	color: var(--clr-bg-primary);
-	font-size: 3rem;
+	font-size: 4rem;
 	line-height: 1.2;
-	padding: 0.5rem 0;
+	padding: 0.5rem;
+
+	@media (max-width: ${breakpoints.mobile}) {
+		font-size: 3rem;
+	}
 `
 
 export const Paragraph = styled.p`
 	grid-area: paragraph;
 	color: var(--clr-fg-secondary);
 	font-weight: bold;
+	font-size: 2rem;
+	padding: 0.5rem;
 `
 
 export const Picture = styled.img`
@@ -60,4 +73,8 @@ export const Picture = styled.img`
 	height: 70%;
 	object-fit: cover;
 	object-position: center;
+
+	@media (max-width: ${breakpoints.mobile}) {
+		height: 100%;
+	}
 `
