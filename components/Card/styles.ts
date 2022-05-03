@@ -16,10 +16,16 @@ export const Container = styled.div`
 	}
 `
 
-export const Thumbnail = styled.img<{ src: string }>`
+export const Thumbnail = styled.div<{
+	src: string
+}>`
 	min-height: 60%;
-	width: 100%;
-	background-color: ${props => props.src};
+	max-width: 100%;
+	/* background-color: ${props => props.src}; */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-image: url(${props => props.src});
 `
 
 export const Details = styled.div`
