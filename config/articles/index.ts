@@ -1,4 +1,4 @@
-import placeholder from '../placeholder'
+import placeholder from '@/config/placeholder'
 
 export default [
 	{

@@ -7,7 +7,7 @@ export const Container = styled.div`
 	margin-bottom: 4rem;
 	width: min(calc(100% - 2rem), 62.5rem);
 	padding: 0rem;
-	inset: 1rem;
+	top: 1rem;
 
 	display: grid;
 	gap: 1rem;

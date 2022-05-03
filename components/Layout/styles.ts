@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	display: flex;
-	margin: 2rem;
+	margin-top: 2rem;
 	margin-bottom: 0;
 	height: calc(100vh - 2rem);
 	overflow: hidden;
@@ -15,6 +15,7 @@ export const Container = styled.div`
 	flex: 1 1 0%;
 	overflow-y: auto;
 	overflow-x: hidden;
+	padding-inline: 2rem;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 120rem;
