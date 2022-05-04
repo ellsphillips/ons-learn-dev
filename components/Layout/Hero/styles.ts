@@ -70,7 +70,7 @@ export const Picture = styled.img`
 	grid-area: image;
 	border-radius: 1rem;
 	width: 100%;
-	height: 70%;
+	height: max(24rem, 70%);
 	object-fit: cover;
 	object-position: center;
 
