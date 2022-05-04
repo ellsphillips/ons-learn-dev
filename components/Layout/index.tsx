@@ -8,7 +8,6 @@ import Navigation from '../Nav'
 import SocialMedia from '../SocialMedia'
 import ThemeToggle from '../ThemeToggle'
 import Header from './Header'
-import Hero from './Hero'
 import Main from './Main'
 import Sidebar from './Sidebar'
 import * as Menu from './Sidebar/styles'
@@ -44,11 +43,7 @@ const Layout = ({ children }): ReactElement => {
 					<Container>
 						<Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-						<Main>
-							<Hero />
-
-							{children}
-						</Main>
+						<Main>{children}</Main>
 					</Container>
 				</Wrapper>
 			</ThemeProvider>
