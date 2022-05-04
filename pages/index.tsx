@@ -1,25 +1,24 @@
 import Card from '@/components/Card'
 import Grid from '@/components/Grid'
-import Layout from '@/components/Layout'
 import articles from '@/config/articles'
+import useSlug from '@/hooks/useSlug'
 import Link from 'next/link'
 import React from 'react'
-import { CONTENT } from '../config/'
 
 const HomePage = () => {
 	return (
-		<Layout>
-			{/*  */}
-			{CONTENT.home}
-
+		<>
 			<Grid>
 				{articles.map(article => (
-					<Link key={article.slug} href={`/article/${article.slug}`}>
+					<Link
+						key={useSlug(article.title)}
+						href={`/article/${useSlug(article.title)}`}
+					>
 						<a style={{ textDecoration: 'none' }}>
 							<Card
 								author={article.author}
 								title={article.title}
-								subtitle={article.subtitle}
+								subtitle={article.caption}
 								profile={article.profile}
 								thumbnail={article.thumbnail}
 							/>
@@ -27,7 +26,7 @@ const HomePage = () => {
 					</Link>
 				))}
 			</Grid>
-		</Layout>
+		</>
 	)
 }
 
